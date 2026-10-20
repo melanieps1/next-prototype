@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f2f0ec">
+    <meta name="description" content="Focus on the work, not the to-do list. Always know what’s next.">
+    <title>Next | Focus on the work, not the to-do list. Always know what’s next.</title>
+    <link rel="stylesheet" href="tokens.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Main navigation">
+        <a class="brand" href="#today" aria-label="Next home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false"><path d="m5.5 12.5 4.2 4.2L18.8 7.8"/></svg>
+          </span>
+          <span>Next</span>
+        </a>
+        <div class="workspace-label">YOUR SPACE</div>
+        <nav class="primary-nav">
+          <button class="nav-item active" data-screen="today">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13h6V4H4v9Zm0 7h6v-4H4v4Zm10 0h6v-9h-6v9Zm0-16v4h6V4h-6Z"/></svg>
+            <span>Today</span>
+            <span class="nav-count">4</span>
+          </button>
+          <button class="nav-item" data-screen="project">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4h4.2l1.7 2h7.1A1.5 1.5 0 0 1 20 7.5v11a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5v-13Z"/></svg>
+            <span>Projects</span>
+          </button>
+        </nav>
+        <div class="sidebar-bottom">
+          <p class="sidebar-note">Focus on the work, not the to-do list. Always know what’s <strong>Next</strong>.</p>
+          <button class="profile-button" aria-label="Melanie's profile">
+            <span class="avatar">M</span>
+            <span class="profile-copy"><strong>Melanie</strong><small>Product Manager</small></span>
+            <span class="profile-dots" aria-hidden="true">···</span>
+          </button>
+        </div>
+      </aside>
+
+      <main class="main-area">
+        <header class="topbar">
+          <div class="breadcrumbs"><strong id="topbar-title">Today</strong></div>
+          <div class="topbar-actions">
+            <button class="sync-status" id="integration-status" aria-label="View integration connection status"><span class="sync-dot"></span> Up to date <span aria-hidden="true">›</span></button>
+            <button class="icon-button" aria-label="Notifications" id="notification-button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9Zm-8 12h4"/></svg>
+              <i class="notification-indicator"></i>
+            </button>
+          </div>
+        </header>
+
+        <section class="screen active" id="today-screen" aria-labelledby="today-heading">
+          <div class="content-wrap today-wrap">
+            <div class="greeting-row">
+              <div>
+                <p class="eyebrow">TUESDAY, OCTOBER 20</p>
+                <h1 id="today-heading">Good afternoon, Melanie<span class="greeting-dot">.</span></h1>
+                <p class="intro-copy">Let’s see what you should focus on next.</p>
+              </div>
+            </div>
+
+            <button class="detected-banner" id="open-detected-task">
+              <span class="detected-icon" aria-hidden="true"><span>＋</span></span>
+              <span class="detected-message"><strong>3 tasks added from your conversations today</strong><small>From your product sync, Slack, and email</small></span>
+              <span class="banner-action">See details <span aria-hidden="true">→</span></span>
+              <span class="banner-close" aria-hidden="true">×</span>
+            </button>
+
+            <div class="dashboard-grid">
+              <article class="focus-card">
+                <div class="focus-topline"><span class="focus-label"><span class="focus-sparkle" aria-hidden="true">✦</span> YOUR NEXT FOCUS</span><span class="focus-time">~25 MIN</span></div>
+                <div class="focus-content">
+                <span class="focus-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="document-page" d="M7 3.75h7l4.25 4.3v12.2H7z"/><path class="document-detail" d="M14 3.75v4.5h4.25M9.5 12h6M9.5 15.5h6"/></svg></span>
+                  <div class="focus-copy">
+                    <h2>Send the revised launch brief to Alex</h2>
+                    <p>It’s the one thing unblocking the team’s review. The rest can wait.</p>
+                    <div class="focus-meta"><span class="source-pill"><span class="mail-glyph" aria-hidden="true">✉</span> Email from Alex</span><span class="meta-divider"></span><span class="urgent-badge">Due today</span></div>
+                  </div>
+                  <button class="complete-focus" id="complete-focus">Mark as done <span aria-hidden="true">✓</span></button>
+                </div>
+              </article>
+
+              <div class="dashboard-lower-grid">
+                <section class="commitments-section">
+                  <div class="section-heading">
+                    <div><h2>Your next commitments</h2><p>In order of priority</p></div>
+                    <button class="text-button" id="show-all">All tasks <span aria-hidden="true">→</span></button>
+                  </div>
+                  <div class="task-list" id="task-list">
+                    <div class="task-row">
+                      <button class="task-toggle" aria-label="Mark Share the onboarding risks with the team as done" aria-pressed="false"><span class="task-check"><span aria-hidden="true"></span></span></button>
+                      <button class="task-open" data-task="detected"><span class="task-row-copy"><strong>Share the onboarding risks with the team</strong><small>Q4 onboarding refresh</small></span></button>
+                      <span class="task-due urgent-badge">Today</span>
+                      <span class="row-arrow" aria-hidden="true">↗</span>
+                    </div>
+                    <div class="task-row">
+                      <button class="task-toggle" aria-label="Mark Book time with Sam about the partner feedback as done" aria-pressed="false"><span class="task-check"><span aria-hidden="true"></span></span></button>
+                      <button class="task-open" data-task="standalone"><span class="task-row-copy"><strong>Book time with Sam about the partner feedback</strong><small></small></span></button>
+                      <span class="task-due urgent-badge">Tomorrow</span>
+                      <span class="row-arrow" aria-hidden="true">↗</span>
+                    </div>
+                    <div class="task-row">
+                      <button class="task-toggle" aria-label="Mark Review the customer interview themes as done" aria-pressed="false"><span class="task-check"><span aria-hidden="true"></span></span></button>
+                      <button class="task-open" data-task="project-task"><span class="task-row-copy"><strong>Review the customer interview themes</strong><small>Q4 onboarding refresh</small></span></button>
+                      <span class="task-due">Thu, Oct 22</span>
+                      <span class="row-arrow" aria-hidden="true">↗</span>
+                    </div>
+                  </div>
+                  <div class="quiet-note">4 more tasks are safely tracked.</div>
+                </section>
+
+              <aside class="side-column">
+                <section class="project-card">
+                  <div class="section-heading compact-heading"><div><span class="card-kicker">IN MOTION</span><h2>Your projects</h2></div><button class="subtle-icon" data-screen="project" aria-label="Open project">↗</button></div>
+                  <button class="project-summary" data-screen="project">
+                    <span class="project-icon" aria-hidden="true">↗</span>
+                    <span class="project-summary-copy"><strong>Q4 onboarding refresh</strong></span>
+                    <span class="project-chevron">›</span>
+                  </button>
+                  <div class="project-summary second-project">
+                    <span class="project-icon second-project-icon" aria-hidden="true">◎</span>
+                    <span class="project-summary-copy"><strong>Enterprise renewal readiness</strong></span>
+                  </div>
+                </section>
+              </aside>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="screen" id="project-screen" aria-labelledby="project-heading">
+          <div class="content-wrap project-wrap">
+            <button class="back-link" data-screen="today"><span aria-hidden="true">←</span> Back</button>
+            <div class="project-hero">
+              <div class="project-hero-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4h4.2l1.7 2h7.1A1.5 1.5 0 0 1 20 7.5v11a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5v-13Z"/></svg></div>
+              <div class="project-hero-copy">
+                <p class="eyebrow">PROJECT · PRODUCT</p>
+                <h1 id="project-heading">Q4 onboarding refresh</h1>
+                <p class="project-subtitle">Make the first 30 days feel effortless for every new customer.</p>
+              </div>
+              <button class="more-button" aria-label="More project options">···</button>
+            </div>
+            <div class="project-summary-strip">
+              <div><span class="strip-label">PROGRESS</span><strong>2 <span class="of-total">of 6 tasks</span></strong><small class="progress-inline"><span></span> On track</small></div>
+              <div><span class="strip-label">DEADLINE</span><strong>November 13</strong><small>4 weeks remaining</small></div>
+            </div>
+            <div class="project-body">
+              <section class="project-task-area">
+                <div class="section-heading"><div><h2>Moving the work forward</h2><p>Small steps, adding up to something meaningful.</p></div><button class="project-add" id="add-task">＋ Add a task</button></div>
+                <div class="milestone-line"><span class="milestone-dot"></span><span>THIS WEEK</span><span class="milestone-rule"></span></div>
+                <div class="project-task-list">
+                  <button class="project-task-row" data-task="detected"><span class="task-check"><span></span></span><span class="project-task-copy"><strong>Share the onboarding risks with the team</strong><small>Captured from today’s product sync</small></span><span class="task-due urgent-badge">Today</span><span class="row-arrow" aria-hidden="true">↗</span></button>
+                  <button class="project-task-row" data-task="project-task"><span class="task-check"><span></span></span><span class="project-task-copy"><strong>Review the customer interview themes</strong><small>Next up</small></span><span class="task-due">Thu, Oct 22</span><span class="row-arrow" aria-hidden="true">↗</span></button>
+                  <button class="project-task-row" data-task="later"><span class="task-check"><span></span></span><span class="project-task-copy"><strong>Draft the updated onboarding plan</strong><small>Waiting for interview synthesis</small></span><span class="task-due">Oct 26</span></button>
+                  <button class="project-task-row" data-task="later"><span class="task-check"><span></span></span><span class="project-task-copy"><strong>Share the plan with customer success</strong><small>Milestone · Share onboarding plan</small></span><span class="task-due">Oct 30</span></button>
+                </div>
+                <details class="completed-tasks">
+                  <summary>Completed tasks <span>2</span></summary>
+                  <div class="project-task-list completed-list">
+                    <button class="project-task-row completed" data-task="completed"><span class="task-check checked"><span>✓</span></span><span class="project-task-copy"><strong>Gather feedback from recent onboardings</strong><small>Completed Oct 19</small></span><span class="task-due">Done</span></button>
+                    <button class="project-task-row completed" data-task="completed"><span class="task-check checked"><span>✓</span></span><span class="project-task-copy"><strong>Map the current welcome experience</strong><small>Completed Oct 20</small></span><span class="task-due">Done</span></button>
+                  </div>
+                </details>
+              </section>
+              <aside class="project-aside">
+                <article class="milestone-card"><div class="milestone-card-top"><span class="milestone-card-icon">◎</span><span class="card-kicker">GOAL</span></div><h3>Help 80% of new customers complete core setup within 14 days.</h3><p>Measured across the next customer cohort.</p><div class="outcome-divider"></div><span class="strip-label">WHY IT MATTERS</span><p class="why-copy">A confident start helps customers reach value sooner.</p></article>
+                <article class="source-card"><span class="card-kicker">PROJECT TIMELINE</span><div class="rhythm-item"><span class="rhythm-point current"></span><div><strong>Plan & align</strong><small>This week · 2 of 3 done</small></div></div><div class="rhythm-item"><span class="rhythm-point"></span><div><strong>Design the experience</strong><small>Oct 26 to Nov 2</small></div></div><div class="rhythm-item"><span class="rhythm-point"></span><div><strong>Share & learn</strong><small>Nov 3 to Nov 13</small></div></div></article>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <section class="screen" id="task-screen" aria-labelledby="task-heading">
+          <div class="content-wrap task-detail-wrap">
+            <button class="back-link" id="task-back"><span aria-hidden="true">←</span> Back</button>
+            <div class="task-detail-layout">
+              <article class="task-detail-main">
+                <div class="task-detail-kicker"><span class="ai-label">CAPTURED</span><span class="detail-date">Added just now · Today</span></div>
+                <div class="task-title-row"><span class="large-task-check" aria-hidden="true"><span></span></span><div><h1 id="task-heading">Share the onboarding risks with the team</h1><p id="task-subheading">A task captured from your product sync.</p></div></div>
+                <div class="task-detail-actions"><button class="primary-button" id="review-task">Looks right <span aria-hidden="true">✓</span></button><button class="secondary-button" id="edit-task">Edit</button><button class="quiet-button" id="dismiss-task">Remove task</button></div>
+                <div class="task-detail-divider"></div>
+                <div class="detail-section">
+                  <p class="section-overline">WHAT WAS SAID</p>
+                  <blockquote>“I’ll share the top onboarding risks with the team after this. We should get ahead of the handoff gaps before the next customer cohort.”</blockquote>
+                  <div class="transcript-source"><span class="source-avatar">P</span><span><strong>Product sync</strong><small>Today, 10:14 AM · Meeting notes</small></span><button class="source-open" aria-label="Open source">↗</button></div>
+                </div>
+                <div class="detail-section task-attributes">
+                  <p class="section-overline">TASK DETAILS</p>
+                  <div class="attribute-row"><span>Due</span><button class="attribute-value" id="date-value">Today <span>⌄</span></button></div>
+                  <div class="attribute-row project-attribute"><div class="attribute-label"><span>Belongs to</span><small>Projects are optional. Leave this blank for a standalone task.</small></div><button class="attribute-value" id="project-value">Q4 onboarding refresh <span>⌄</span></button></div>
+                  <div class="attribute-row"><span>Reminder</span><button class="attribute-value" id="reminder-value">None <span>⌄</span></button></div>
+                </div>
+                <div class="detail-section editable-details">
+                  <label class="section-overline" for="task-notes">DETAILS</label>
+                  <textarea id="task-notes" rows="3" placeholder="Add details to help you move this forward…"></textarea>
+                  <div class="attachment-controls"><label class="attachment-button" for="task-attachments">＋ Attach files</label><input id="task-attachments" type="file" multiple><ul id="attachment-list" aria-live="polite"></ul></div>
+                </div>
+              </article>
+              <aside class="task-detail-aside">
+                <div class="context-card"><p class="card-kicker">WHY THIS IS HERE</p><h3>You said you would share the onboarding risks on a call.</h3><p>I picked this up from your meeting so you can stay with the conversation, not stop to write everything down.</p><div class="context-rule"></div><div class="context-status"><span class="status-check">✓</span><span><strong>Already on your list</strong><small>No approval needed. Review only if you want to.</small></span></div></div>
+                <div class="standalone-note"><span class="standalone-icon">↗</span><p><strong>Projects are optional.</strong> Tasks can be part of a bigger goal, or simply stand on their own.</p></div>
+              </aside>
+            </div>
+          </div>
+        </section>
+        <section class="screen" id="integrations-screen" aria-labelledby="integrations-heading">
+          <div class="content-wrap integrations-wrap">
+            <button class="back-link" data-screen="today"><span aria-hidden="true">←</span> Back</button>
+            <div class="project-hero">
+              <div class="project-hero-icon integration-hero-icon" aria-hidden="true">↻</div>
+              <div class="project-hero-copy"><p class="eyebrow">CONNECTIONS</p><h1 id="integrations-heading">Your integrations</h1><p class="project-subtitle">See where Next is finding tasks and when each source last synced.</p></div>
+            </div>
+            <div class="integration-list">
+              <article class="integration-row"><img class="integration-logo" src="https://fonts.gstatic.com/s/i/productlogos/gmail_2020q4/v8/192px.svg" alt=""><span><strong>Gmail</strong><small>Email threads and follow-ups</small></span><span class="integration-state"><i></i> Connected · synced 8 min ago</span></article>
+              <article class="integration-row"><img class="integration-logo" src="https://www.google.com/s2/favicons?domain=gong.io&amp;sz=128" alt=""><span><strong>Gong</strong><small>Sales calls and customer conversations</small></span><span class="integration-state"><i></i> Connected · synced 3 min ago</span></article>
+              <article class="integration-row"><img class="integration-logo" src="https://fonts.gstatic.com/s/i/productlogos/calendar_2020q4/v8/192px.svg" alt=""><span><strong>Google Calendar</strong><small>Events and meeting notes</small></span><span class="integration-state"><i></i> Connected · synced 2 min ago</span></article>
+              <article class="integration-row"><img class="integration-logo" src="https://fonts.gstatic.com/s/i/productlogos/meet_2020q4/v8/192px.svg" alt=""><span><strong>Google Meet</strong><small>Meeting transcripts and follow-ups</small></span><span class="integration-state"><i></i> Connected · synced 4 min ago</span></article>
+              <article class="integration-row"><img class="integration-logo" src="https://cdn.simpleicons.org/googletasks" alt=""><span><strong>Google Tasks</strong><small>Tasks and reminders</small></span><span class="integration-state not-connected"><i></i> Not connected</span></article>
+              <article class="integration-row"><img class="integration-logo" src="https://www.google.com/s2/favicons?domain=granola.ai&amp;sz=128" alt=""><span><strong>Granola</strong><small>Meeting notes and follow-ups</small></span><span class="integration-state"><i></i> Connected · synced 6 min ago</span></article>
+              <article class="integration-row"><img class="integration-logo" src="https://www.google.com/s2/favicons?domain=teams.microsoft.com&amp;sz=128" alt=""><span><strong>Microsoft Teams</strong><small>Chats and meeting follow-ups</small></span><span class="integration-state not-connected"><i></i> Not connected</span></article>
+              <article class="integration-row"><img class="integration-logo" src="https://cdn.simpleicons.org/notion" alt=""><span><strong>Notion</strong><small>Project notes and action items</small></span><span class="integration-state"><i></i> Connected · synced 12 min ago</span></article>
+              <article class="integration-row"><img class="integration-logo" src="https://a.slack-edge.com/80588/marketing/img/icons/icon_slack_hash_colored.png" alt=""><span><strong>Slack</strong><small>Messages and follow-ups</small></span><span class="integration-state"><i></i> Connected · synced 5 min ago</span></article>
+              <article class="integration-row"><img class="integration-logo" src="https://cdn.simpleicons.org/zoom" alt=""><span><strong>Zoom</strong><small>Meeting transcripts and follow-ups</small></span><span class="integration-state"><i></i> Connected · synced 9 min ago</span></article>
+            </div>
+            <p class="integration-disclaimer">Illustrative prototype status. No real accounts are connected.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+    <dialog id="email-source-dialog" class="source-dialog">
+      <form method="dialog"><button class="dialog-close" aria-label="Close source preview">×</button></form>
+      <p class="card-kicker" id="source-preview-kicker">EMAIL · ALEX MORGAN</p>
+      <h2 id="source-preview-heading">Revised launch brief</h2>
+      <p class="email-preview-meta" id="source-preview-meta">Today, 9:42 AM · To you</p>
+      <p id="source-preview-body">Could you send the revised launch brief before the team review? That’s the last thing we need to unblock feedback.</p>
+      <p class="email-preview-signoff" id="source-preview-signoff">From Alex</p>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
