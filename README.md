@@ -23,6 +23,10 @@ In communication-heavy roles, tasks and commitments show up across meetings, mes
 
 The prototype uses illustrative sample data. Integrations and task detection are simulated; it does not connect real accounts or validate a production prioritization model.
 
+## Landing page
+
+[View the Next landing page](https://melanieps1.github.io/next-prototype/landing/)
+
 ## About this project
 
 This is a learning experiment, not a production application or a claim that the product concept has been validated. The research is exploratory, and the prototype is intended to make the product hypothesis tangible and invite further feedback.
