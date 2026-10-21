@@ -27,6 +27,8 @@ The prototype uses illustrative sample data. Integrations and task detection are
 
 [View the Next landing page](https://melanieps1.github.io/next-prototype/landing/)
 
+The landing page explores how to market Next by explaining its value to potential users: less time organizing tasks and more time moving important work forward.
+
 ## About this project
 
 This is a learning experiment, not a production application or a claim that the product concept has been validated. The research is exploratory, and the prototype is intended to make the product hypothesis tangible and invite further feedback.
