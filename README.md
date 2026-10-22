@@ -19,7 +19,7 @@ In communication-heavy roles, tasks and commitments show up across meetings, mes
 
 ## Presentation slide deck
 
-[View the presentation]([https://melanieps1.github.io/next-prototype/landing/](https://docs.google.com/presentation/d/1bY97H07r5bEQ2-lHR9Fm0jyVFGc01GVa5Fzt8UBe1eU/edit?usp=sharing))
+[View the presentation](https://docs.google.com/presentation/d/1bY97H07r5bEQ2-lHR9Fm0jyVFGc01GVa5Fzt8UBe1eU/edit?usp=sharing)
 
 A walkthrough of my thought process, learnings and how I landed on my product direction for the landing page and prototype.
 
