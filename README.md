@@ -17,17 +17,23 @@ In communication-heavy roles, tasks and commitments show up across meetings, mes
 - Exploring how tasks might be prioritized, explained, and reviewed
 - Iterating on the design system and a clickable prototype based on feedback
 
-## Prototype
+## Presentation slide deck
 
-[View the live prototype](https://melanieps1.github.io/next-prototype/)
+[View the presentation]([https://melanieps1.github.io/next-prototype/landing/](https://docs.google.com/presentation/d/1bY97H07r5bEQ2-lHR9Fm0jyVFGc01GVa5Fzt8UBe1eU/edit?usp=sharing))
 
-The prototype uses illustrative sample data. Integrations and task detection are simulated; it does not connect real accounts or validate a production prioritization model.
+A walkthrough of my thought process, learnings and how I landed on my product direction for the landing page and prototype.
 
 ## Landing page
 
 [View the Next landing page](https://melanieps1.github.io/next-prototype/landing/)
 
 The landing page explores how to market Next by explaining its value to potential users: less time organizing tasks and more time moving important work forward.
+
+## Prototype
+
+[View the live prototype](https://melanieps1.github.io/next-prototype/)
+
+The prototype uses illustrative sample data. Integrations and task detection are simulated; it does not connect real accounts or validate a production prioritization model.
 
 ## About this project
 
